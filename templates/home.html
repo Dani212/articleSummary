@@ -8,22 +8,23 @@
     </head>
     <body >
         <div>
-            <nav class="navbar navbar-light bg-light">
-                <a class="navbar-brand" href="#">Zina summary</a>
+            <nav id="navbar" class="navbar navbar-light ">
+                <a id="navText" class="navbar-brand" href="#">Zina summary</a>
             </nav>
               
         </div>
 
-        <div class="container">
+        <div id="container">
 
             <div class="row">
                 <div class="col-sm mr-1">
                     <div id="colHeader">
                         <h4>Article</h4>
                     </div>
-                    <form id="form" action="{{ url_for('submit') }}" method="post">
-                        <textarea id="article" name="articlee" 
+                    <form id="form" action="{{ url_for('submit') }}" method="post" enctype = "multipart/form-data">
+                        <textarea id="article" name="article" 
                             placeholder="Copy and past your text  or url (Only one url per request)" >{{ articleText }}</textarea>
+                        <input type = "file" name = "file" />
                         <input id="btn" type="submit" value="Summarize" />
                     </form>
                 </div>
