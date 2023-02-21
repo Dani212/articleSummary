@@ -2,5 +2,5 @@
 # exit on error
 set -o errexit
 
-pip install --upgrade pip
+pip install --upgrade pip --force
 pip install -r requirements.txt
