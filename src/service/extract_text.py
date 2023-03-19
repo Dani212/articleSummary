@@ -53,7 +53,7 @@ class GetTextByExtension:
         # os.path.join is used so that paths work in every operating system
         file.save(os.path.join(UPLOAD_FOLDER, filename))
 
-        doc = fitz.open(filename)
+        doc = fitz.open(UPLOAD_FOLDER+"/"+filename)
 
         text = ''
         for page in doc:
