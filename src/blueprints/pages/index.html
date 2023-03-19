@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Summary</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="../staticFiles/index.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <head>
+    <!-- navbar-->
+    <nav class="navbar navbar-expand-lg py-3 sticky-top bg-body-tertiary bg-white">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="/staticFiles/img/shot.png" class="logo" alt="img">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#Home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('summary.summarize') }}">Summary</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#features">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#review">Reviews</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Comment</a>
+            </li>
+          </ul>
+          <button class="btn btn-dark ms-lg-3">Final Project by Zeinab</button>
+        </div>
+      </div>
+    </nav> <!--navbar end-->
+
+  <!--welcome-->
+  <div class="welcome vh-100 d-flex align-items-center" id="Home">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7 mx-auto text-center">
+          <h1 class="display-4 text-white">Welcome To Z-Summary</h1>
+          <p class="text-white py-4"> We are an online summarizing tool that helps you to summarize documents, 
+            URLs, and articles with their main concept in one click. 
+            Z-Summary analyzes the entire document and summarizes the text by picking up the most important concepts.</p>
+            <a href="{{ url_for('summary.summarize') }}" class="btn btn-dark">Summarize Now</a>
+            <!-- <a href="" class="btn btn-secondary ms-lg-3">More Info</a> -->
+        </div>
+      </div>
+
+    </div>
+  </div><!--welcome end-->
+
+  <!--services-->
+  <section id="services">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-md-8 mx-auto text-center">
+          <h6 class="text-secondary">ABOUT</h6>
+          <h2>Our Services</h2>
+          <p>Z-Summary can condense articles, URLs, or documents down to the key points instantly. 
+            Our AI uses natural language processing to locate critical information while maintaining the original context.</p>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-4 col-sm-6">
+      <div class="service card-effect">
+        <div class="iconbox">
+          <i class='bx bxs-file-doc'></i>
+        </div>
+        <h5 class="mt-4 mb-2">Document Upload</h5>
+        <p>Documents like .txt, .pdf can be uploaded for summary</p>
+      </div>
+        </div>
+        <!-- <div class="col-lg-4 col-sm-6">
+      <div class="service card-effect">
+        <div class="iconbox">
+          <i class='bx bxs-file-doc'></i>
+        </div>
+        <h5 class="mt-4 mb-2">Document Upload</h5>
+        <p>Below are some common color names and codes. With these colors, you can also use the color name.</p>
+      </div>
+        </div> -->
+        <div class="col-lg-4 col-sm-6">
+      <div class="service card-effect">
+        <div class="iconbox">
+          <i class='bx bx-paste'></i>
+        </div>
+        <h5 class="mt-4 mb-2">URL paste</h5>
+        <p>With this feature you can paste URLs and get summary. One URL at a time</p>
+      </div>
+        </div>
+        <!-- <div class="col-lg-4 col-sm-6">
+      <div class="service card-effect">
+        <div class="iconbox">
+          <i class='bx bx-paste'></i>
+        </div>
+        <h5 class="mt-4 mb-2">URL paste</h5>
+        <p>Below are some common color names and codes. With these colors, you can also use the color name.</p>
+      </div>
+        </div> -->
+        <div class="col-lg-4 col-sm-6">
+      <div class="service card-effect">
+        <div class="iconbox">
+          <i class='bx bx-link'></i>
+        </div>
+        <h5 class="mt-4 mb-2">Copy/Paste text</h5>
+        <p>You can get a summary of copied words from the internet</p>
+      </div>
+        </div>
+        <!-- <div class="col-lg-4 col-sm-6">
+      <div class="service card-effect">
+        <div class="iconbox">
+          <i class='bx bx-link'></i>
+        </div>
+        <h5 class="mt-4 mb-2">Copy/Paste text</h5>
+        <p>Below are some common color names and codes. With these colors, you can also use the color name.</p>
+      </div>
+        </div> -->
+      </div>
+
+    </div>
+
+
+  </section><!--service end-->
+ 
+  <!--features-->
+  <section class="row w-100 bg-light" id="features">
+    <div class="col-lg-6 col-img"> </div>
+      <div class="col-lg-6">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-10 offset-md-1">
+              <h6 class="text-dark">Why choose Z-Summary</h6>
+              <h1>Best Summary For You</h1>
+              <p>We are an online summarizing tool that helps you to summarize document, 
+                URLs, and articles with their main concept in one click</p>
+            
+                 <div class="feature d-flex">
+                  <div class="iconbox me-3">
+                    <i class='bx bx-happy-alt'></i>
+                  </div>
+                  <div> <h5 class="">100% Free</h5>
+                  <p>You do not need to pay or create an account to access Z-Summary</p>
+                </div>
+                </div>
+                 <div class="feature d-flex">
+                  <div class="iconbox me-3">
+                    <i class='bx bxs-user-check'></i>
+                  </div>
+                  <div> <h5 class="">Reliable</h5>
+                  <p>Just sit and Relax</p>
+                </div>
+                </div>
+                 <div class="feature d-flex">
+                  <div class="iconbox me-3">
+                    <i class='bx bxs-chart'></i>
+                  </div>
+                  <div> <h5 class="">Accurate</h5>
+                  <p>Always giving you the best of the best</p>
+                </div>
+                </div>
+                 
+            </div>
+          </div>
+        </div>
+     
+    </div>
+  </section> <!--features end-->
+
+  <!--reviews-->
+<section id="review" class="">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-md-8 mx-auto text-center">
+        <h6 class="text-secondary">REVIEWS</h6>
+        <h2 class="">User Reviews</h2>
+      </div>
+    </div>
+
+ <div class="row g-4">
+    <div class="col-md-4">
+        <div class="card p-3 text-center px-4">  
+          <!-- <div class="user-image">
+        <img src="data:image/jpeg;base64,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" class="rounded-circle" width="80">       
+    </div> -->
+      <div class="user-content">
+          <h5 class="mb-0">David Kofi</h5>
+          <span>Student</span>
+          <p>it helped me with my school project</p>
+            </div>
+            
+            <div class="ratings">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <!-- <i class="fa-regular fa-star"></i> -->
+                
+            </div>
+            
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        
+        <div class="card p-3 text-center px-4">
+            
+            <!-- <div class="user-image">
+              <img src="https://news.providence.edu/wp-content/uploads/sites/120/2021/01/jennifermerandisse-962x1024.jpg" class="rounded-circle" width="80">
+           </div> -->
+            <div class="user-content">   
+                <h5 class="mb-0">Mary Gana</h5>
+                <span>Writer</span>
+                <p>Always using it and it never fails</p>
+            </div>
+            <div class="ratings">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <!-- <i class="fa-regular fa-star"></i> -->
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card p-3 text-center px-4">
+            <!-- <div class="user-image">
+        <img src="https://i.imgur.com/ACeArwY.jpg" class="rounded-circle" width="80">
+            </div> -->
+            
+            <div class="user-content">
+                <h5 class="mb-0">Shrek Dave</h5>
+                <span>Writer</span>
+                <p>Best summary i have used</p>
+                
+            </div>
+            <div class="ratings">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                
+            </div>
+        </div>
+    </div>
+      </div>
+  </div>
+</section><!--reviews end-->
+
+ <!-- CONTACT -->
+ <section id="contact">
+  <div class="container">
+      <div class="row mb-5">
+          <div class="col-md-8 mx-auto text-center">
+              <h6 class="text-secondary">COMMENT</h6>
+              <h1>Post Your Review</h1>
+              <!-- <p>Lorem ipsum dolor sit amet consectetur nisi necessitatibus</p> -->
+          </div>
+      </div>
+
+      <form action="" class="row g-3 justify-content-center">
+          <div class="col-md-10">
+              <input type="text" class="form-control" placeholder="Full Name..." required>
+          </div>
+          <div class="col-md-10">
+              <input type="text" class="form-control" placeholder="Enter your Profession..." required>
+          </div>
+          <div class="col-md-10">
+              <textarea name="" id="" cols="30" rows="5" class="form-control"
+                  placeholder="Enter your Comment..." required></textarea>
+          </div>
+          <div class="col-md-10 d-grid">
+              <button type="button" class="btn btn-dark">Contact</button>
+          </div>
+      </form>
+
+  </div>
+</section><!-- CONTACT -->
+
+<!--footer-->
+<footer class="">
+  <div class="footer-top">
+      <div class="container">
+          <div class="row gy-4">
+              <div class="col-lg-4">
+                  <img class="logo" src="/staticFiles/img/shot.png" alt="img">
+              </div>
+              <div class="col-lg-2">
+                  <h5 class="text-white">View</h5>
+                  <ul class="list-unstyled">
+                      <li><a href="#about" style="text-decoration: none;">About</a></li>
+                      <li><a href="#services" style="text-decoration: none;">Services</a></li>
+
+                  </ul>
+              </div>
+              <div class="col-lg-2">
+                  <h5 class="text-white">More</h5>
+                  <ul class="list-unstyled">
+                      <li><a style="text-decoration: none;" href="#review">FAQ's</a></li>
+                      <li><a href="{{ url_for('summary.summarize') }}"  style="text-decoration: none;">Summarize Now</a></li>
+
+                  </ul>
+              </div>
+              <div class="col-lg-4">
+                  <h5 class="text-white">Contact</h5>
+                  <ul class="list-unstyled">
+                      <li>Address: Ghana Accra, Achimota</li>
+                      <li>Email: Z-Summary@example.com</li>
+                      <li>Phone: (030) 555-0123</li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="footer-bottom py-3 ">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-6">
+                  <p class="mb-0">©2023 copyright all right reserved | Designed with <i class="bx bx-heart text-danger"></i> by Marshal</p>
+              </div>
+              <div class="col-md-6">
+                  <div class="social-icons">
+                      <a style="text-decoration: none;" href="#"><i class='bx bxl-facebook'></i></a>
+                      <a style="text-decoration: none;" href="#"><i class='bx bxl-twitter'></i></a>
+                      <a style="text-decoration: none;" href="#"><i class='bx bxl-instagram-alt'></i></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</footer><!--footer end-->
+  
+  
+
+
+
+
+
+
+
+<!--bootstrap js-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <!--font awesome-->
+  <script src="https://kit.fontawesome.com/9a400e1a00.js" crossorigin="anonymous"></script>
+</html>
