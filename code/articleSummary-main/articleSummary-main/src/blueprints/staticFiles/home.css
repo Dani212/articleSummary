@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;600&display=swap');
+    :root{
+  /* --primary: #6c757d; */
+  --dark: #21252f;
+  --body: #888;
+  --white: #ffffff;
+  --box-shadow: 0 8px 22px rgba(0,0,0,0.1);
+}
+
+body {
+  font-family: "Sora", sans-serif;
+  line-height: 1.7;
+  /* overflow: hidden; */
+  color: var(--body);
+}
+
+h1,h2,h3,h4,h5,h6,
+.display-4 {
+  color: var(--dark);
+  font-weight: 700;
+}
+.navbar .nav-link {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.navbar {
+    box-shadow: var(--box-shadow);
+}
+
+.articlesummary {
+    background-image: url(https://res.cloudinary.com/drl5lcpyr/image/upload/v1679336979/pen_qzquhh.jpg);
+    background-position: center;
+    background-size:contain;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 2;
+}
+
+.articlesummary::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(77, 77, 83, 0.8);
+    z-index: -1;
+}
+
+.text{
+  width: 100%;
+  height: 300px;
+  background-color: var(--white) ;
+  color: var(--dark);
+ 
+}
+
+footer{
+  background: black;
+}
+.footer-top {
+    padding-top: 90px;
+    padding-bottom: 90px;
+    background-color: black;
+}
+
+.footer-top a {
+    color: var(--body);
+}
+
+.footer-top a:hover {
+    color: var(--white);
+}
+.social-icons {
+    display: flex;
+    justify-content: center;
+}
+.social-icons a {
+    width: 34px;
+    height: 34px;
+    background-color: var(--dark);
+    border-radius: 2px solid var(--dark);
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    margin-left: 5px;
+    transition: all 0.4s ease;
+    border: 2px solid var(--dark);
+}
+
+.social-icons a:hover {
+    color: var(--primary);
+    background-color: transparent;
+    border-color: var(--dark);
+}
+textarea {
+    resize: none;
+}
+
+#count_message {
+  background-color: var(--white);
+  color: var(--dark);
+  margin-top: -20px;
+  margin-right: 5px;
+}
+.logo{
+  height:40px; 
+  width:160px;
+}

@@ -1,0 +1,120 @@
+Automatic summarization
+user interface
+document upload (pdf, word)
+number of words (both summary and main text)
+
+1.1	INTRODUCTION
+1.2	FIELD AND SUBJECT OF STUDY
+1.3	OBJECTIVES
+1.3.1	General Objective
+1.3.2	Specific Objective
+1.4	PROBLEM STATEMENT
+1.5	SIGNIFICANCE OF THE STUDY
+1.6	BACKGROUND AND JUSTIFICATION OF THE STUDY
+1.6.1	Background 
+1.6.2	Justification
+1.7	EXPECTED RESULTS AND POSSIBLE USAGE
+1.8	LIMITATIONS OF THE STUDY
+1.9	CHAPTER LAYOUT
+
+
+2.1	INTRODUCTION
+2.2	HISTORICAL DEVELOPMENT OF AUTOMATIC SUMMARIZATION
+2.3	DEFINITION OF TERMS
+2.3.1	Article
+2.3.2	Summarization
+2.3.3	Automatic summary
+2.3.4	Algorithm
+2.3.5	Text Rank Algorithm
+2.3.6	Interface
+2.3.7	Cluster
+2.3.8	Data mining
+2.3.9	Extractive method
+2.4	CONCEPT OF AUTOMATIC SUMMARIZATION
+2.5	TECHNIQUES TO ACHIEVING AUTOMATIC SUMMARIZATION
+2.5.1	Abstractive Approach Technique
+2.5.2	Extractive Approach Technique
+2.6	EMPIRICAL REVIEW
+2.7	THEORETICAL REVIEW
+2.8	RELEVANCY OF RESEARCH
+2.9	RELATED METHODS
+2.10	LIMITATIONS AND GAPS
+2.11	CONCLUSION
+
+3.1	INTRODUCTION
+3.2	DESCRIPTION OF THE PROPOSED SYSTEM
+3.3	DESIGN AND DEVELOPMENT PROCESS OF THE SYSTEM
+3.3.1	Understanding the problem
+3.3.2	Design and Development
+3.3.3	Testing and Evaluation
+3.3.4	Implementation and Integration
+3.3.5	Maintenance
+3.4	METHODOLOGY
+3.5	EXTRACTIVE SUMMARIZATION
+3.6	SYSTEM ANALYSIS MATERIALS TO BE USED
+3.6.1 Survey as method of data collection
+3.6.2 Interview as a method of data Collection
+3.7	FRAMEWORK OF THE SYSTEM
+3.7.1	High level system framework for previous text summarization
+3.7.2	Proposed framework for article summarization
+3.8	CONCLUSION
+
+
+
+SaiyedSaziyabegum, Priti S. Sajja, “Literature Review
+on Extractive Text Summarization Approaches”
+International Journal of Computer Applications (0975-
+8887) Volume 156- No 12, December 2016
+
+Reeta Rani, Sawal Tandon, "LITERATURE REVIEW ON 
+AUTOMATIC TEXT SUMMARIZATION" International Journal of Current Advanced Research
+(9779 - 9783) Volume 7; Issue 2(C); February 2018
+
+Chin-Yew Lin, “Rouge: A Package for Automatic
+Evaluation of Summaries.” Barcelona Spain, Workshop
+o Text Summarization Branches Out, Post- Conference
+Workshop of ACL 2004
+
+Akshi Kumar, Aditi Sharma, Sidhant Sharma, Shashwat
+Kashyap, “Performance Analysis of Keyword
+Extraction Algorithms Assessing Extractive Text
+Summarization.” International Conference on
+Computer, Communication, and Electronics
+(Comptelix), 2017.
+
+Pankaj Gupta, RituTiwari and Nirmal Robert,
+“Sentiment Analysis and Text Summarization of Online
+Reviews: A Survey.” International Conference on
+Communication and Signal Processing, 2016.
+
+Taeho Jo, “K Nearest Neighbor for Text Summarization
+using Feature Similarity.” International Conference on
+Communication, Control, Computing and Electronics
+Engineering (ICCCCEE), 2017
+
+S Hima Bindu Sri, Sushma Rani Dutta,"A Survey on Automatic 
+Text Summarization Techniques" International Conference on Physics and Energy 2021 (ICPAE 2021)
+
+Donalek, Ciro. "Supervised and unsupervised learning." Astronomy Colloquia. USA.
+2011.
+
+Jawahar, D. (2012). Overview of System Analysis & Design. Prof. Dharminder Kumar
+
+Barros, C., Lloret, E., Saquete, E., Navarro-colorado, B., 2019. NATSUM : Narrative
+abstractive summarization through cross- document timeline generation.
+Intformation Process. Manag. 56, 1775–1793.
+
+Allahyari, M., Pouriyeh, S., Assefi, M., Safaei, S., Trippe, E.D., Gutierrez, J.B., Kochut,
+K., 2017. Text summarization techniques: A brief survey. Int. J. Adv. Comput. Sci.
+Appl. 8.
+
+Murad, M.A.A., Martin, T., 2007. Similarity-based estimation for document
+summarization using fuzzy sets. Int. J. Comput. Sci. Secur. 1, 1.
+
+Lun, H.P., 1958. The automatic creation of literature abstracts. IBM J., 159–165
+
+Adhika Pramita Widyassari, Supriadi Rustad, Guruh Fajar Shidik, Edi Noersasongko,
+Abdul Syukur, Affandy Affandy, De Rosal Ignatius Moses Setiadi, "Review of 
+automatic text summarization techniques & methods" A.P. Widyassari et al. 
+/ Journal of King Saud University – Computer and Information Sciences 34 (2022) 1029–1046.
+

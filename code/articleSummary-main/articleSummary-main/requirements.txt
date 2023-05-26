@@ -1,0 +1,9 @@
+autopep8
+flask
+gunicorn
+pip-chill
+pymupdf
+pypdf2
+python-docx
+requests
+validators
