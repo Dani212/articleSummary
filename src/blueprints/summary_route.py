@@ -23,7 +23,7 @@ def summarize():
             errors.append(error)
         return render_template("home.html", 
                                summary=summary, articleText=articleText, errors=errors)
-
+ 
 # # @app.errorhandler(404)
 # # def page_not_found(error):
 # #     return render_template('home.html'), 404
