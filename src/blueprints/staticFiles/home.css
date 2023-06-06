@@ -100,7 +100,7 @@ textarea {
     resize: none;
 }
 
-#count_message {
+#summartTextarea {
   background-color: var(--white);
   color: var(--dark);
   margin-top: -20px;
