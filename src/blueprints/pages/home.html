@@ -50,7 +50,7 @@
                         <div class="articlepasteform">
                             <span class="ms-auto" id="count_message"></span>words
                              <form id="form" action="{{url_for('summary.summarize')}}" method="post" enctype = "multipart/form-data">
-                                <textarea class="text" id="text" name="article" maxlength="10000" placeholder="Paste copied text here...&#10Upload document here (.pdf,.txt)...&#10Paste Url here (One Url at a time)...">{{ articleText }}</textarea>
+                                <textarea class="text" id="text" name="article" maxlength="1000" placeholder="Paste copied text here...&#10Upload document here (.pdf,.txt)...&#10Paste Url here (One Url at a time)...">{{ articleText }}</textarea>
                                 <input type = "file" name = "file" />
                                 <input class="btn btn-success" type="submit" value="Summarize"/>
                             </form>
@@ -125,7 +125,7 @@
         </footer><!--footer end-->
 
         <script>
-            var text_max = 10000;
+            var text_max = 1000;
             $('#count_message').html('0 / ' + text_max );
             
             $('#text').keyup(function() {
@@ -134,6 +134,7 @@
             
             $('#count_message').html(text_length + ' / ' + text_max);
             });
+
         </script>
     
     
