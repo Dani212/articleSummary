@@ -48,7 +48,7 @@
                     <div class="col ">
                         <h4 class=" text-center text-white">Article</h4>
                         <div class="articlepasteform">
-                            <span class="ms-auto" id="wordCount"></span> Word
+                            <span class="ms-auto" id="wordCount"></span> Words
                              <form id="form" action="{{url_for('summary.summarize')}}" method="post" enctype = "multipart/form-data">
                                 <textarea class="text" id="summaryTextarea" name="article" maxlength="1000" placeholder="Paste copied text here...&#10Upload document here (.pdf,.txt)...&#10Paste Url here (One Url at a time)...">{{ articleText }}</textarea>
                                 <input type = "file" name = "file" />
@@ -132,10 +132,10 @@ textarea.addEventListener('input', function() {
   const summary = textarea.value.trim();
   const wordCount = countWords(summary);
 //   wordCountDisplay.textContent = `Word count: ${wordCount}`;
-if (wordCount >= 1000) {
-    wordCountMessage.textContent = "Word count: " + wordCount + " (Minimum word count reached)";
+if (wordCount >= 10000) {
+    wordCountDisplay.textContent = "Word count: " + wordCount + " (Minimum word count reached)";
   } else {
-    wordCountMessage.textContent = "Word count: " + wordCount + " (Minimum word count not reached)";
+    wordCountDisplay.textContent = "Word count: " + wordCount + " (Minimum word count not reached)";
   }
 });
 
