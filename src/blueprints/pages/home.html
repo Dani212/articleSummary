@@ -129,9 +129,14 @@
 const wordCountDisplay = document.getElementById('wordCount');
 
 textarea.addEventListener('input', function() {
-  const summary = textarea.value;
+  const summary = textarea.value.trim();
   const wordCount = countWords(summary);
-  wordCountDisplay.textContent = `Word count: ${wordCount}`;
+//   wordCountDisplay.textContent = `Word count: ${wordCount}`;
+if (wordCount >= 1000) {
+    wordCountMessage.textContent = "Word count: " + wordCount + " (Minimum word count reached)";
+  } else {
+    wordCountMessage.textContent = "Word count: " + wordCount + " (Minimum word count not reached)";
+  }
 });
 
 function countWords(summary) {
