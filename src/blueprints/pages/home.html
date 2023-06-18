@@ -48,7 +48,7 @@
                     <div class="col ">
                         <h4 class=" text-center text-white">Article</h4>
                         <div class="articlepasteform">
-                            <span class="ms-auto" id="wordCount"></span> Words
+                            <span class="ms-auto" id="wordCount"></span> Word
                              <form id="form" action="{{url_for('summary.summarize')}}" method="post" enctype = "multipart/form-data">
                                 <textarea class="text" id="summaryTextarea" name="article" maxlength="1000" placeholder="Paste copied text here...&#10Upload document here (.pdf,.txt)...&#10Paste Url here (One Url at a time)...">{{ articleText }}</textarea>
                                 <input type = "file" name = "file" />
