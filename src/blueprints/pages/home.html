@@ -34,7 +34,7 @@
         <!--Article / summary-->
         <div class="articlesummary vh-100 d-flex align-items-center ">
             <div class="container">
-
+                <marquee class="text-warning" style="font-size: 14px;"><b>Words should not be below 30.</b></marquee>
                 <!--error message-->
                 {% for error in errors %} 
                     <div class="alert alert-danger alert-dismissible fade show " role="alert">
@@ -43,7 +43,7 @@
                     </div>    
                 {% endfor %} 
                 <!--error message end-->
-                
+
                 <div class="row bg-dark">
                     <div class="col ">
                         <h4 class=" text-center text-white">Article</h4>
@@ -132,7 +132,7 @@ textarea.addEventListener('input', function() {
   const summary = textarea.value.trim();
   const wordCount = countWords(summary);
 //   wordCountDisplay.textContent = `Word count: ${wordCount}`;
-if (wordCount >= 10000) {
+if (wordCount >= 1000) {
     wordCountDisplay.textContent = "Word count: " + wordCount + " (Minimum word count reached)";
   } else {
     wordCountDisplay.textContent = "Word count: " + wordCount + " (Minimum word count not reached)";
