@@ -62,7 +62,7 @@
                         <div class="articleoutput">
                             <span class="ms-auto" id="wordCountFeedback2"></span>...
                             <div>
-                            <textarea class="text" id="summary2" oninput="countWordsAndUpdateFeedback(2)" placeholder="Summary output...">{{ summary }}</textarea>
+                            <textarea class="text" id="summary2" oninput="countWordsAndUpdateFeedback(2)" placeholder="Summary output..." disabled>{{ summary }}</textarea>
                             </div>
                         </div>
                     </div>
@@ -144,7 +144,7 @@ function countWordsAndUpdateFeedback(textareaNumber) {
 
   if (textareaNumber === 1) {
     if (wordCount < minWordCount) {
-      feedbackElement.style.color = "red";
+      feedbackElement.style.color = "gray";
     } else if (wordCount > maxWordCount) {
       feedbackElement.style.color = "red";
       feedbackElement.textContent += " (Word count exceeds 10,000!)";
