@@ -60,9 +60,9 @@
                     <div class="col ms-lg-3">
                         <h4 class=" text-center text-white">Summary</h4>
                         <div class="articleoutput">
-                            <span class="ms-auto" id="wordOutputCount"></span>...
+                            <span class="ms-auto" id="wordOutputCount"></span>..
                             <div>
-                            <textarea class="text" id="summaryTextOutput" placeholder="Summary output..." disabled>{{ summary }}</textarea>
+                            <textarea class="text" id="summaryTextOutput" placeholder="Summary output...">{{ summary }}</textarea>
                             </div>
                         </div>
                     </div>
@@ -125,17 +125,21 @@
         </footer><!--footer end-->
 
 <script>
-function countWords(summaryTextarea) {
-  const summary = document.getElementById(summaryTextarea);
-  const words = summary.value.trim().split(/\s+/);
+// function countWords(summary) {
+//   const words = summary.trim().split(/\s+/);
+//   return words.length;
+// }
+function countWords(textareaId) {
+  const textarea = document.getElementById(textareaId);
+  const words = textarea.value.trim().split(/\s+/);
   return words.length;
 }
 
 function countWordsAndUpdateFeedback() {
-  const textarea = document.getElementById("summaryTextarea");
+  const textareaInput = document.getElementById("summaryTextarea");
   const textareaOutput = document.getElementById("summaryTextOutput");
 
-  const wordCount = countWords(textarea.value);
+  const wordCount = countWords(textareaInput.value);
   const wordCountOutput = countWords(textareaOutput.value);
 
   const feedbackElement = document.getElementById("wordCountFeedback");
