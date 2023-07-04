@@ -48,9 +48,9 @@
                     <div class="col ">
                         <h4 class=" text-center text-white">Article</h4>
                         <div class="articlepasteform">
-                            <span class="ms-auto" id="wordCount"></span>...
+                            <span class="ms-auto" id="wordCountFeedback"></span>...
                              <form id="form" action="{{url_for('summary.summarize')}}" method="post" enctype = "multipart/form-data">
-                                <textarea class="text" id="summaryTextar" name="article" maxlength="10000" placeholder="Paste copied text here...&#10Upload document here (.pdf,.txt)...&#10Paste Url here (One Url at a time)...">{{ articleText }}</textarea>
+                                <textarea class="text" id="summaryText" oninput="countWordsAndUpdateFeedback()" placeholder="Paste copied text here...&#10Upload document here (.pdf,.txt)...&#10Paste Url here (One Url at a time)...">{{ articleText }}</textarea>
                                 <input type = "file" name = "file" />
                                 <input class="btn btn-success" type="submit" value="Summarize"/>
                             </form>
@@ -60,9 +60,9 @@
                     <div class="col ms-lg-3">
                         <h4 class=" text-center text-white">Summary</h4>
                         <div class="articleoutput">
-                            <span class="ms-auto" id="wordCount"></span>..
+                            <span class="ms-auto" id="wordCount"></span>...
                             <div>
-                            <textarea class="text" id="summaryTextarea" placeholder="Summary output...">{{ summary }}</textarea>
+                            <textarea class="text" id="summaryTextarea" name="article" placeholder="Summary output...">{{ summary }}</textarea>
                             </div>
                         </div>
                     </div>
@@ -124,34 +124,35 @@
             </div>
         </footer><!--footer end-->
 
-        <script>
-          const textarea = document.getElementById('summaryTextarea');
-const wordCountDisplay = document.getElementById('wordCount');
-
-textarea.addEventListener('input', function() {
-  const summary = textarea.value.trim();
-  const wordCount = countWords(summary);
-//   wordCountDisplay.textContent = `Word count: ${wordCount}`;
-if (wordCount >= 30) {
-    wordCountDisplay.textContent = "Word count: " + wordCount + " (Minimum word count reached)";
-  } else {
-    wordCountDisplay.textContent = "Word count: " + wordCount + " (Minimum word count not reached)";
-  }
-});
-
+<script>
 function countWords(summary) {
-  // Remove leading and trailing white spaces
-  summary = summary.trim();
- 
-
-  // Split the summary into an array of words
-  const words = summary.split(/\s+/);
-
-  // Return the number of words in the summary
+  const words = summary.trim().split(/\s+/);
   return words.length;
 }
 
-        </script>
+function countWordsAndUpdateFeedback() {
+  const textarea = document.getElementById("summaryText");
+  const wordCount = countWords(textarea.value);
+
+  const feedbackElement = document.getElementById("wordCountFeedback");
+  feedbackElement.textContent = `Word count: ${wordCount}`;
+
+  if (wordCount < 30) {
+    feedbackElement.style.color = "red";
+  } else if (wordCount > 10000) {
+    feedbackElement.style.color = "red";
+    feedbackElement.textContent += " (Word count exceeds 10,000!)";
+  } else {
+    feedbackElement.style.color = "black";
+  }
+}
+
+// Optional: Set initial word count feedback when the page loads
+window.addEventListener("DOMContentLoaded", () => {
+  countWordsAndUpdateFeedback();
+});
+
+</script>
     
     
         <!--bs-js-->
