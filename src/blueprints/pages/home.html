@@ -60,9 +60,9 @@
                     <div class="col ms-lg-3">
                         <h4 class=" text-center text-white">Summary</h4>
                         <div class="articleoutput">
-                            <span class="ms-auto" id="wordOutputCount"></span>...
+                            <span class="ms-auto" id="wordOutputCount"></span>..
                             <div>
-                            <textarea class="text" id="summaryTextoutput" placeholder="Summary output...">{{ summary }}</textarea>
+                            <textarea class="text" id="summaryTextOutput" placeholder="Summary output...">{{ summary }}</textarea>
                             </div>
                         </div>
                     </div>
@@ -132,24 +132,24 @@ function countWords(summary) {
 
 function countWordsAndUpdateFeedback() {
   const textarea = document.getElementById("summaryTextarea");
-  const textareaOutput = document.getElementById("summaryTextoutput");
+  const textareaOutput = document.getElementById("summaryTextOutput");
 
   const wordCount = countWords(textarea.value);
-  const wordCountOutput = countWords (textareaOutput.value);
+  const wordCountOutput = countWords(textareaOutput.value);
 
   const feedbackElement = document.getElementById("wordCountFeedback");
   feedbackElement.textContent = `Word count: ${wordCount}`;
   const CountsWordOutput = document.getElementById("wordOutputCount");
   CountsWordOutput.textContent = `Word count: ${wordCountOutput}`;
 
-  if (wordCount < 30) {
-    feedbackElement.style.color = "red";
-  } else if (wordCount > 10000) {
-    feedbackElement.style.color = "red";
-    feedbackElement.textContent += " (Word count exceeds 10,000!)";
-  } else {
-    feedbackElement.style.color = "white";
-  }
+//   if (wordCount < 30) {
+//     feedbackElement.style.color = "red";
+//   } else if (wordCount > 10000) {
+//     feedbackElement.style.color = "red";
+//     feedbackElement.textContent += " (Word count exceeds 10,000!)";
+//   } else {
+//     feedbackElement.style.color = "white";
+//   }
 }
 
 // Optional: Set initial word count feedback when the page loads
