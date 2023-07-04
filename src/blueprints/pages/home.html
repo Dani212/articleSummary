@@ -48,9 +48,9 @@
                     <div class="col ">
                         <h4 class=" text-center text-white">Article</h4>
                         <div class="articlepasteform">
-                            <span class="ms-auto" id="wordCountFeedback"></span>...
+                            <span class="ms-auto" id="wordCountFeedback1"></span>...
                              <form id="form" action="{{url_for('summary.summarize')}}" method="post" enctype = "multipart/form-data">
-                                <textarea class="text" id="summaryTextarea" name="article" oninput="countWordsAndUpdateFeedback(1)" placeholder="Paste copied text here...&#10Upload document here (.pdf,.txt)...&#10Paste Url here (One Url at a time)...">{{ articleText }}</textarea>
+                                <textarea class="text" id="summary1" name="article" oninput="countWordsAndUpdateFeedback(1)" placeholder="Paste copied text here...&#10Upload document here (.pdf,.txt)...&#10Paste Url here (One Url at a time)...">{{ articleText }}</textarea>
                                 <input type = "file" name = "file" />
                                 <input class="btn btn-success" type="submit" value="Summarize"/>
                             </form>
@@ -60,9 +60,9 @@
                     <div class="col ms-lg-3">
                         <h4 class=" text-center text-white">Summary</h4>
                         <div class="articleoutput">
-                            <span class="ms-auto" id="wordOutputCount"></span>...
+                            <span class="ms-auto" id="wordCountFeedback2"></span>...
                             <div>
-                            <textarea class="text" id="summaryTextOutput" oninput="countWordsAndUpdateFeedback(2)" placeholder="Summary output...">{{ summary }}</textarea>
+                            <textarea class="text" id="summary2" oninput="countWordsAndUpdateFeedback(2)" placeholder="Summary output...">{{ summary }}</textarea>
                             </div>
                         </div>
                     </div>
