@@ -60,7 +60,7 @@
                     <div class="col ms-lg-3">
                         <h4 class=" text-center text-white">Summary</h4>
                         <div class="articleoutput">
-                            <span class="ms-auto" id="wordOutputCount"></span>..
+                            <span class="ms-auto" id="wordOutputCount"></span>...
                             <div>
                             <textarea class="text" id="summaryTextOutput" placeholder="Summary output...">{{ summary }}</textarea>
                             </div>
@@ -98,9 +98,11 @@
                         <div class="col-lg-4">
                             <h5 class="text-white">Contact</h5>
                             <ul class="list-unstyled">
+                               <address>
                                 <li>Address: Ghana Accra, Achimota</li>
                                 <li>Email: Z-Summary@example.com</li>
                                 <li>Phone: (030) 555-0123</li>
+                            </address>
                             </ul>
                         </div>
                     </div>
@@ -130,8 +132,8 @@
 //   return words.length;
 // }
 function countWords(textareaId) {
-  const textarea = document.getElementById(textareaId);
-  const words = textarea.value.trim().split(/\s+/);
+//   const textarea = document.getElementById(textareaId);
+  const words = textareaId.value.trim().split(/\s+/);
   return words.length;
 }
 
@@ -139,17 +141,17 @@ function countWordsAndUpdateFeedback() {
   const textareaInput = document.getElementById("summaryTextarea");
   const textareaOutput = document.getElementById("summaryTextOutput");
 
-  const wordCount = countWords(textareaInput.value);
+  const wordCountInput = countWords(textareaInput.value);
   const wordCountOutput = countWords(textareaOutput.value);
 
   const feedbackElement = document.getElementById("wordCountFeedback");
-  feedbackElement.textContent = `Word count: ${wordCount}`;
+  feedbackElement.textContent = `Word count: ${wordCountInput}`;
   const CountsWordOutput = document.getElementById("wordOutputCount");
   CountsWordOutput.textContent = `Word count: ${wordCountOutput}`;
 
-  if (wordCount < 30) {
+  if (wordCountInput < 30) {
     feedbackElement.style.color = "red";
-  } else if (wordCount > 10000) {
+  } else if (wordCountInput > 10000) {
     feedbackElement.style.color = "red";
     feedbackElement.textContent += " (Word count exceeds 10,000!)";
   } else {
