@@ -131,14 +131,14 @@ function countWords(summary) {
 }
 
 function countWordsAndUpdateFeedback() {
-  const textarea = document.getElementById("summaryTextarea");
+//   const textarea = document.getElementById("summaryTextarea");
   const textareaOutput = document.getElementById("summaryTextOutput");
 
-  const wordCount = countWords(textarea.value);
+//   const wordCount = countWords(textarea.value);
   const wordCountOutput = countWords(textareaOutput.value);
 
-  const feedbackElement = document.getElementById("wordCountFeedback");
-  feedbackElement.textContent = `Word count: ${wordCount}`;
+//   const feedbackElement = document.getElementById("wordCountFeedback");
+//   feedbackElement.textContent = `Word count: ${wordCount}`;
   const CountsWordOutput = document.getElementById("wordOutputCount");
   CountsWordOutput.textContent = `Word count: ${wordCountOutput}`;
 
