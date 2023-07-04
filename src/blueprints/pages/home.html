@@ -50,7 +50,7 @@
                         <div class="articlepasteform">
                             <span class="ms-auto" id="wordCountFeedback"></span>...
                              <form id="form" action="{{url_for('summary.summarize')}}" method="post" enctype = "multipart/form-data">
-                                <textarea class="text" id="summaryTextarea" name="article" oninput="countWordsAndUpdateFeedback()" placeholder="Paste copied text here...&#10Upload document here (.pdf,.txt)...&#10Paste Url here (One Url at a time)...">{{ articleText }}</textarea>
+                                <textarea class="text" id="summaryTextarea" name="article" oninput="countWordsAndUpdateFeedback(1)" placeholder="Paste copied text here...&#10Upload document here (.pdf,.txt)...&#10Paste Url here (One Url at a time)...">{{ articleText }}</textarea>
                                 <input type = "file" name = "file" />
                                 <input class="btn btn-success" type="submit" value="Summarize"/>
                             </form>
@@ -62,7 +62,7 @@
                         <div class="articleoutput">
                             <span class="ms-auto" id="wordOutputCount"></span>...
                             <div>
-                            <textarea class="text" id="summaryTextOutput" placeholder="Summary output...">{{ summary }}</textarea>
+                            <textarea class="text" id="summaryTextOutput" oninput="countWordsAndUpdateFeedback(2)" placeholder="Summary output...">{{ summary }}</textarea>
                             </div>
                         </div>
                     </div>
@@ -127,42 +127,41 @@
         </footer><!--footer end-->
 
 <script>
-// function countWords(summary) {
-//   const words = summary.trim().split(/\s+/);
-//   return words.length;
-// }
-function countWords(textareaId) {
-//   const textarea = document.getElementById(textareaId);
-  const words = textareaId.value.trim().split(/\s+/);
+const minWordCount = 30;
+const maxWordCount = 10000;
+
+function countWords(summary) {
+  const words = summary.trim().split(/\s+/);
   return words.length;
 }
 
-function countWordsAndUpdateFeedback() {
-  const textareaInput = document.getElementById("summaryTextarea");
-  const textareaOutput = document.getElementById("summaryTextOutput");
+function countWordsAndUpdateFeedback(textareaNumber) {
+  const textarea = document.getElementById(`summary${textareaNumber}`);
+  const wordCount = countWords(textarea.value);
 
-  const wordCountInput = countWords(textareaInput.value);
-  const wordCountOutput = countWords(textareaOutput.value);
+  const feedbackElement = document.getElementById(`wordCountFeedback${textareaNumber}`);
+  feedbackElement.textContent = `Word count: ${wordCount}`;
 
-  const feedbackElement = document.getElementById("wordCountFeedback");
-  feedbackElement.textContent = `Word count: ${wordCountInput}`;
-  const CountsWordOutput = document.getElementById("wordOutputCount");
-  CountsWordOutput.textContent = `Word count: ${wordCountOutput}`;
-
-  if (wordCountInput < 30) {
-    feedbackElement.style.color = "red";
-  } else if (wordCountInput > 10000) {
-    feedbackElement.style.color = "red";
-    feedbackElement.textContent += " (Word count exceeds 10,000!)";
-  } else {
-    feedbackElement.style.color = "white";
+  if (textareaNumber === 1) {
+    if (wordCount < minWordCount) {
+      feedbackElement.style.color = "red";
+    } else if (wordCount > maxWordCount) {
+      feedbackElement.style.color = "red";
+      feedbackElement.textContent += " (Word count exceeds 10,000!)";
+      const words = textarea.value.trim().split(/\s+/).slice(0, maxWordCount);
+      textarea.value = words.join(" ");
+    } else {
+      feedbackElement.style.color = "white";
+    }
   }
 }
 
 // Optional: Set initial word count feedback when the page loads
 window.addEventListener("DOMContentLoaded", () => {
-  countWordsAndUpdateFeedback();
+  countWordsAndUpdateFeedback(1);
+  countWordsAndUpdateFeedback(2);
 });
+
 
 </script>
     
